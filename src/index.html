@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Tracking</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="shortcut icon" href="assets/images/favicon-pixelart.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="cabeçalho">
+        <header>
+            <h1>My Progress Tracking</h1>
+        </header>
+    </div>
+    <div class="container">
+        <div class="coluna-esquerda">
+            <img src="../src/assets/images/Sprite-0001.gif" alt="o primeiro" data-text="This was my first pixel art, my intention was make something like the matrix rain code background, but how you can see, I failed miserably. It looks like some smartphone piano games.">
+            <img src="../src/assets/images/Sprite-0002.gif" alt="o segundo" data-text="This was my second pixel art, I was inspired by the atmosphere of the city at night, so as not to be static I tried to make an animation, I think it didn't work out that well, I still have a long way to go before I reach a cool quality.">
+            <img src="../src/assets/images/Sprite-0004.gif" alt="O terceiro" data-text="About this one, it was my third, and my inspiration for it just came into my head when I was busy with something else, the result surprised me, this time I think I outdid myself.">
+        </div>
+        <div class="painel"></div>
+        <div class="coluna-direita">
+            <h2>Hello there!</h2>
+            <p id="saudacoes">Ítalo here.</p>
+            <div class="foto"></div>
+            <p>I created this website to record and track my progress with my pixel arts.</p>
+            <h2>How to use it?</h2>
+            <p>To follow the progress just click on the images in the left column, they are arranged as follows: the first is the oldest and the last is the most recent.</p>
+        </div>
+    </div>
+    <footer class="rodape">
+        Shereke Corporation, todos os direitos não estão reservados.
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const images = document.querySelectorAll(".coluna-esquerda img");
+            const painel = document.querySelector(".painel");
+
+            images.forEach(img => {
+                img.addEventListener("click", function() {
+                    painel.innerHTML = '';
+
+                    const text = document.createElement("p");
+                    text.textContent = this.getAttribute("data-text");
+                    text.classList.add("texto-exibido");
+
+                    const clonedImage = img.cloneNode();
+                    clonedImage.classList.add("imagem-exibida");
+
+                    painel.appendChild(clonedImage);
+                    painel.appendChild(text);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

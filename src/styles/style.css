@@ -1,0 +1,130 @@
+body {
+    background-color: #3a3a3a;
+}
+
+h1{
+    color: #ffffff;
+}
+
+h2 {
+    text-align: center;
+    color: #ffffff;
+    background-color: #333333;
+    border-radius: 7px;
+    width: 50%;
+    margin-left: 25%;
+}
+
+p {
+    text-align: justify;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #333333;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+#saudacoes {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    background-color: #4c4c4c;
+    height: 100vh;
+    border-radius: 7px;
+    margin: 10px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    background-color: #4c4c4c;
+    margin: 10px;
+    border-radius: 7px;
+    text-align: center;
+}
+
+.coluna-esquerda {
+    display: inline-flex;
+    flex-direction: column;
+    background-color: #3a3a3a;
+    border-radius: 7px;
+    width: 20%;
+    justify-items: flex-start;
+    margin: 10px;
+}
+
+.coluna-esquerda > img {
+    border-radius: 15px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.painel {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #3a3a3a;
+    width: 60%;
+    border-radius: 7px;
+    margin: 10px;
+    padding: 20px;
+    color: #ffffff;
+}
+
+.coluna-direita {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #3a3a3a;
+    width: 20%;
+    border-radius: 7px;
+    margin: 10px;
+}
+
+.foto {
+    background-color: green;
+    height: 200px;
+    width: 90%;
+    align-items: center;
+    border-radius: 7px;
+    margin: auto;
+}
+
+.rodape {
+    display: flex;
+    width: 100%;
+    background-color: rgb(196, 21, 196);
+    border-radius: 7px;
+    justify-content: center;
+}
+
+.texto-exibido {
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #333333;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    line-height: 1.5;
+    text-align: justify;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.imagem-exibida {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+@media(max-width:790px){
+    .coluna-direita{
+        display: none;
+    }
+}
